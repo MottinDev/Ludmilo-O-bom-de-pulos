@@ -9,11 +9,13 @@ public class Enemy : MonoBehaviour
     private NavMeshAgent agent;
     private GameObject player;
     private Vector3 lastKnowPos;
+    private Animator animator;
 
     public NavMeshAgent Agent { get => agent; }
     public GameObject Player { get => player; }
     public Vector3 LastKnowPos { get => lastKnowPos; set => lastKnowPos = value; }
     public Path path;
+    public AnimationConfig animationConfig;
     public GameObject debugsphere;
     [Header("Sight Values")]
     
@@ -31,10 +33,17 @@ public class Enemy : MonoBehaviour
     {
         stateMachine = GetComponent<StateMachine>();
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
         stateMachine.Initialise();
         player = GameObject.FindGameObjectWithTag("Player");
-        
-        
+
+        // Configura o controlador de animação do ScriptableObject
+        if (animationConfig != null && animator != null)
+        {
+            animator.runtimeAnimatorController = animationConfig.animatorController;
+        }
+
+
     }
 
     // Update is called once per frame
@@ -72,5 +81,12 @@ public class Enemy : MonoBehaviour
         }
         return false;
         
+    }
+    public void SetAnimationParameter(string parameter, bool value)
+    {
+        if (animator != null && animationConfig != null)
+        {
+            animator.SetBool(parameter, value);
+        }
     }
 }

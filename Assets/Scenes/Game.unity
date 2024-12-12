@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.09583985, g: 0.031674482, b: 0.0060548848, a: 1}
+  m_IndirectSpecularColor: {r: 0.09583772, g: 0.031673137, b: 0.0060594883, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1419,6 +1419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 1300603924}
+  animationConfig: {fileID: 11400000, guid: 058b8d45295739643a246d6a96c9142f, type: 2}
   debugsphere: {fileID: 604955148}
   sightDistance: 60.8
   fieldOfView: 90.02
@@ -8054,6 +8055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 2019995673}
+  animationConfig: {fileID: 0}
   debugsphere: {fileID: 604955148}
   sightDistance: 60.8
   fieldOfView: 90.02
@@ -11400,6 +11402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 1300603924}
+  animationConfig: {fileID: 0}
   debugsphere: {fileID: 604955148}
   sightDistance: 60.8
   fieldOfView: 90.02
@@ -14941,6 +14944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 253563324}
+  animationConfig: {fileID: 0}
   debugsphere: {fileID: 604955148}
   sightDistance: 60.8
   fieldOfView: 90.02
