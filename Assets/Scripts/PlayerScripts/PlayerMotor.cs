@@ -160,6 +160,12 @@ public class PlayerMotor : MonoBehaviour
         }
     }
 
+    public void MoveInstantly(Vector3 displacement)
+    {
+        // Move o player diretamente, sem modificar a velocidade
+        controller.Move(displacement);
+    }
+
     public void SetAlive(bool alive)
     {
         isAlive = alive;

@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     public Vector3 LastKnowPos { get => lastKnowPos; set => lastKnowPos = value; }
     public Path path;
     public AnimationConfig animationConfig;
-    public GameObject debugsphere;
+    
     [Header("Sight Values")]
     
     public float sightDistance = 30f;
@@ -51,7 +51,7 @@ public class Enemy : MonoBehaviour
     {
         CanSeePlayer();
         currentState = stateMachine.activeState.ToString();
-        debugsphere.transform.position = lastKnowPos;
+      
         
     }
     public bool CanSeePlayer()
